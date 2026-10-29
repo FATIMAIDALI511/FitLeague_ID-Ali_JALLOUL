@@ -8,13 +8,36 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         rel="nofollow" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
         crossorigin="anonymous"> -->
-        <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
+    <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
+
 <body class="w-full bg-[#F3F5EF]">
-    <nav></nav>
-    <main  class="p-10">
+    <header>
+    <nav class="flex nav bg-black justify-around items-center h-20">
+        <div class="mune-logo flex items-center gap-3">
+            <img src="img/fitzone-logo 1.png" alt="Logo">
+            <h1 class="text-white text-2xl">FITLEAGUE</h1>
+
+            <!-- <div class="icons">
+                    <i class="bi bi-bell text-white text-2xl"></i>
+                    <i class="bi bi-list text-white text-2xl"></i> 
+                </div> -->
+
+        </div>
+        <div class="mune text-white flex gap-4 ">
+            <a class="" href="#TableaudeBord">Tableau de Bord</a>
+            <a class="" href="#Défis">Défis</a>
+            <a class="" href="#Participants">Participants</a>
+            <a class="" href="#Performances">Performances</a>
+            <a class="" href="#Classement">Classement</a>
+        </div>
+        <button class="button rounded-3xl bg-[#C5F03A] border-[1vw] w-60 h-17">+Nouveau défi</button>
+    </nav>
+
+</header>
+    <main class="p-10">
         <h1 class="text-4xl font-bold  mb-4">Tableau de Bord</h1>
         <div class="flex gap-6 justify-center">
             <div class="card border rounded-lg w-2/5 bg-[#FFFFFF]">
@@ -93,7 +116,6 @@
             <div></div>
         </div> -->
     </main>
-
-    </body>
+</body>
 
 </html>
