@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>défis</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#F1F5F0] ">
+    <main>
+        <h1 class="text-4xl pt-10 pl-10 font-bold">DÉFIS</h1>
+        <div class="filters-container grid grid-cols-4 gap-4 m-10">
+            <div
+                class="search-box border  rounded-lg px-4 py-3 bg-white text-[#818680] flex items-center justify-between">
+                Rechercher un
+                défi par titre
+                <svg class="w-3 h-3 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 8">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+                </svg>
+            </div>
+            <div
+                class="filter-sports border border-gray-300 rounded-lg px-4 py-3 bg-white text-[#818680] flex items-center justify-between">
+                Tous les
+                sports
+                <svg class="w-3 h-3 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 8">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+                </svg>
+            </div>
+            <div
+                class="filter-status border border-gray-300 rounded-lg px-4 py-3 bg-white text-[#818680] flex items-center justify-between">
+                Tous les
+                statuts
+                <svg class="w-3 h-3 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 8">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+                </svg>
+            </div>
+            <div
+                class="filter-sort border border-gray-300 rounded-lg px-4 py-3 bg-white text-[#818680] flex items-center justify-between">
+                Trier : date
+                limite<svg class="w-3 h-3 text-gray-800 dark:text-white" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+                </svg>
+            </div>
+        </div>
+        <div class="list-de-defis grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-10">
+            <!-- Défi 1 -->
+            <div class="card1-defis border border-gray-200 bg-white rounded-xl pl-6 pt-8 pr-5 pb-8 flex gap-4 flex-col">
+                <div class="card-header flex items-center justify-between">
+                    <p class="text-[#A0AAB3] font-semibold text-sm">Course à pied</p>
+                    <p1 class="bg-[#C5F03A] rounded-xl w-18 h-6 font-semibold text-sm flex justify-center">Actif</p1>
+                </div>
+                <h2 class="text-2xl" font-bold>100 KM DE COURSE</h2>
+                <div class="flex items-center justify-between text-sm font-semibold text-[#53605A]">
+                    <p>Objectif : 100 km </p>
+                    <p>Limite : 30/11/2026</p>
+                </div>
+                <div class="progress-container flex items-center justify-between">
+                    <div class="bg-[#E6E6E6] w-2/2 h-4 rounded-lg">
+                        <div class="bg-[#FF641F] w-1/2 h-4 rounded-lg"></div>
+                    </div>
+                    <p class="text-sm font-semibold text-[#A0AAB3]">50%</p>
+                </div>
+                <div class="card-actions flex items-center gap-4">
+                    <div class="edit-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold">
+                        Modifier</div>
+                    <div
+                        class="delete-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold text-[#FF641F]">
+                        Supprimer</div>
+                </div>
+
+
+            </div>
+
+
+            <!-- Défi 2 -->
+            <div class="card2-defis border border-gray-200 bg-white rounded-xl pl-6 pt-8 pr-5 pb-8 flex gap-4 flex-col">
+                <div class="card-header flex items-center justify-between">
+                    <p class="text-[#A0AAB3] font-semibold text-sm">Fitness</p>
+                    <p1 class="bg-[#C5F03A] rounded-xl w-18 h-6 font-semibold text-sm flex justify-center">Actif</p1>
+                </div>
+                <h2 class="text-2xl" font-bold>GAINAGE QUOTIDIEN</h2>
+                <div class="flex items-center justify-between text-sm font-semibold text-[#53605A]">
+                    <p>Objectif : 150 min</p>
+                    <p>Limite : 15/11/2026</p>
+                </div>
+
+                <div class="progress-container flex items-center justify-between">
+                    <div class="bg-[#E6E6E6] w-2/2 h-4 rounded-lg">
+                        <div class="bg-[#FF641F] w-1/2 h-4 rounded-lg"></div>
+                    </div>
+                    <p class="text-sm font-semibold text-[#A0AAB3]">45%</p>
+                </div>
+                <div class="card-actions flex items-center gap-4">
+                    <div class="edit-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold">
+                        Modifier</div>
+                    <div
+                        class="delete-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold text-[#FF641F]">
+                        Supprimer</div>
+                </div>
+            </div>
+
+
+            <!-- Défi 3 -->
+            <div class="card3-defis border border-gray-200 bg-white rounded-xl pl-6 pt-8 pr-5 pb-8 flex gap-4 flex-col">
+                <div class="card-header flex items-center justify-between">
+                    <p class="text-[#A0AAB3] font-semibold text-sm">Natation</p>
+                    <p1 class="bg-[#1A2E1E]  text-[#FFFFFF] rounded-xl w-18 h-6 font-semibold text-sm flex justify-center">Terminé</p1>
+                </div>
+                <h2 class="text-2xl" font-bold>TRAVERSÉE À LA NAGE</h2>
+                <div class="flex items-center justify-between text-sm font-semibold text-[#53605A]">
+                    <p>Objectif : 5 km</p>
+                    <p>Limite : 10/10/2026</p>
+                </div>
+
+                <div class="progress-container flex items-center justify-between">
+                    <div class="bg-[#E6E6E6] w-2/2 h-4 rounded-lg">
+                        <div class="bg-[#FF641F] w-2/2 h-4 rounded-lg"></div>
+                    </div>
+                    <p class="text-sm font-semibold text-[#A0AAB3]">100%</p>
+                </div>
+                <div class="card-actions flex items-center gap-4">
+                    <div class="edit-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold">
+                        Modifier</div>
+                    <div
+                        class="delete-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold text-[#FF641F]">
+                        Supprimer</div>
+                </div>
+            </div>
+
+
+            <!-- Défi 4 -->
+            <div class="card4-defis border border-gray-200 bg-white rounded-xl pl-6 pt-8 pr-5 pb-8 flex gap-4 flex-col">
+                <div class="card-header flex items-center justify-between">
+                    <p class="text-[#A0AAB3] font-semibold text-sm">Cyclisme</p>
+                    <p1 class="bg-[#C5F03A] rounded-xl w-18 h-6 font-semibold text-sm flex justify-center">Actif</p1>
+                </div>
+                <h2 class="text-2xl" font-bold>SORTIE VÉLO LONGUE</h2>
+                <div class="flex items-center justify-between text-sm font-semibold text-[#53605A]">
+                    <p>Objectif : 200 km</p>
+                    <p>Limite : 20/12/2026</p>
+                </div>
+
+                <div class="progress-container flex items-center justify-between">
+                    <div class="bg-[#E6E6E6] w-2/2 h-4 rounded-lg">
+                        <div class="bg-[#FF641F] w-1/2 h-4 rounded-lg"></div>
+                    </div>
+                    <p class="text-sm font-semibold text-[#A0AAB3]">18%</p>
+                </div>
+                <div class="card-actions flex items-center gap-4">
+                    <div class="edit-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold">
+                        Modifier</div>
+                    <div
+                        class="delete-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold text-[#FF641F]">
+                        Supprimer</div>
+                </div>
+            </div>
+
+
+            <!-- Défi 5 -->
+            <div class="card5-defis border border-gray-200 bg-white rounded-xl pl-6 pt-8 pr-5 pb-8 flex gap-4 flex-col">
+                <div class="card-header flex items-center justify-between">
+                    <p class="text-[#A0AAB3] font-semibold text-sm">Musculation</p>
+                    <p1 class="bg-[#C5F03A] rounded-xl w-18 h-6 font-semibold text-sm flex justify-center">Actif</p1>
+                </div>
+                <h2 class="text-2xl" font-bold>POMPES EN SÉRIE</h2>
+                <div class="flex items-center justify-between text-sm font-semibold text-[#53605A]">
+                    <p>Objectif : 500 reps</p>
+                    <p>Limite : 5/12/2026</p>
+                </div>
+
+                <div class="progress-container flex items-center justify-between">
+                    <div class="bg-[#E6E6E6] w-2/2 h-4 rounded-lg">
+                        <div class="bg-[#FF641F] w-1/2 h-4 rounded-lg"></div>
+                    </div>
+                    <p class="text-sm font-semibold text-[#A0AAB3]">60%</p>
+                </div>
+                <div class="card-actions flex items-center gap-4">
+                    <div class="edit-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold">
+                        Modifier</div>
+                    <div
+                        class="delete-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold text-[#FF641F]">
+                        Supprimer</div>
+                </div>
+            </div>
+
+
+            <!-- Défi 6 -->
+            <div class="card6-defis border border-gray-200 bg-white rounded-xl pl-6 pt-8 pr-5 pb-8 flex gap-4 flex-col">
+                <div class="card-header flex items-center justify-between">
+                    <p class="text-[#A0AAB3] font-semibold text-sm">Randonnée</p>
+                    <p1 class="bg-[#1A2E1E]  text-[#FFFFFF] rounded-xl w-18 h-6 font-semibold text-sm flex justify-center">Terminé</p1>
+                </div>
+                <h2 class="text-2xl" font-bold>MARCHE EN MONTAGNE</h2>
+                <div class="flex items-center justify-between text-sm font-semibold text-[#53605A]">
+                    <p>Objectif : 3 000 m</p>
+                    <p>Limite : 01/09/2026</p>
+                </div>
+
+                <div class="progress-container flex items-center justify-between">
+                    <div class="bg-[#E6E6E6] w-2/2 h-4 rounded-lg">
+                        <div class="bg-[#FF641F] w-2/2 h-4 rounded-lg"></div>
+                    </div>
+                    <p class="text-sm font-semibold text-[#A0AAB3]">100%</p>
+                </div>
+                <div class="card-actions flex items-center gap-4">
+                    <div class="edit-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold">
+                        Modifier</div>
+                    <div
+                        class="delete-button border rounded-xl h-10 w-23 justify-center items-center flex font-bold text-[#FF641F]">
+                        Supprimer</div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>
