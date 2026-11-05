@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau Défi</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#F1F5F0]">
+    <header>
+        <nav class="flex nav bg-[#0D1F17] justify-between p-10 items-center h-20">
+            <div class="mune-logo flex items-center gap-3">
+                <img src="img/fitzone-logo 1.png" alt="Logo">
+                <h1 class="text-white text-2xl">FITLEAGUE</h1>
+
+                <!-- <div class="icons">
+                    <i class="bi bi-bell text-white text-2xl"></i>
+                    <i class="bi bi-list text-white text-2xl"></i> 
+                </div> -->
+
+            </div>
+            <div class="mune text-white flex gap-4 ">
+                <a class="" href="index.html">Tableau de Bord</a>
+                <a class="" href="défis.html">Défis</a>
+                <a class="" href="Participants.html">Participants</a>
+                <a class="" href="#Performances">Performances</a>
+                <a class="" href="classement.html">Classement</a>
+            </div>
+            <button class="button rounded-3xl bg-[#C5F03A] w-60 h-10">
+                <a href="nouveau_défi.html">+Nouveau défi</a></button>
+        </nav>
+
+    </header>
+    <main>
+        <h1 class="text-4xl pt-10 pl-10 font-bold">NOUVEAU DÉFI</h1>
+        <div class="grid grid-cols-[65%_30%]">
+            <div class="bg-white ml-10 m-4  rounded-2xl p-6">
+                <h2 class="text-2xl font-bold mb-10">INFORMATIONS DU DEFI</h2>
+                <div class="mb-3">
+                    <div class="font-semibold text-gray-800 text-base mb-3">
+                        <label>Titre *</label>
+
+                        <input id="titre" class="w-full border border-gray-300 rounded-xl px-4 py-4  text-black-400"
+                            placeholder="Ex. 100 km de course ce mois-ci">
+                        <p id="erreur-titre" class="text-red-400 text-sm mt-2">
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6 mb-3">
+                    <div class=" font-semibold text-gray-800 text-base mb-3">
+                        <label>Sport *</label>
+                        <select id="sport"
+                            class=" w-full border border-gray-300 rounded-xl px-4 py-4 bg-white text-black-400 flex items-center justify-between">
+                            <option value="">Choisir un sport</option>
+                            <option value="Course à pied">Course à pied</option>
+                            <option value="vélo">vélo</option>
+                            <option value="Natation">Natation</option>
+                            <option value="Marche">Marche</option>
+
+                        </select>
+                        <p id="erreur-sport" class="text-red-400 text-sm mt-2">
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="font-semibold text-gray-800 text-base mb-3">
+                            <label>Date limite *</label>
+                            <input id="date" type="date"
+                                class=" w-full border border-gray-300 rounded-xl px-4 py-4 flex items-center justify-between text-black-400">
+                            <p id="erreur-data" class="text-red-400 text-sm mt-2">
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="col-span-2">
+                        <label class="font-semibold text-gray-800 text-base mb-3">Objectif *</label>
+                        <input id="objectif" class=" w-full border border-gray-300 rounded-xl px-4 py-4 text-black-400"
+                            placeholder="Ex .100">
+
+                        <p id="erreur-objectif" class="text-red-400 text-sm mt-2">    
+                        </p>
+                    </div>
+                    <div>
+                        <label class="font-semibold text-gray-800 text-base mb-3">Unité *</label>
+                        <select id="unite"
+                            class=" w-full border border-gray-300 rounded-xl px-4 py-4 flex items-center justify-between">
+                            <option value="">Choisir un unite</option>
+                            <option value="km">km</option>
+                            <option value="m">m</option>
+                            <option value="heures">heures</option>
+                            <option value="minutes">minutes</option>
+                        </select>
+                        <p id="erreur-unite" class="text-red-400 text-sm mt-2">
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center justify-end gap-4 mt-8">
+                    <button id="annuler"
+                        class="px-6 py-3 rounded-xl font-semibold border border-gray-300">Annuler</button>
+                    <button id="creer" class="px-6 py-3 rounded-xl font-semibold bg-[#C5F03A] text-gray-900">Créer le
+                        défi</button>
+                </div>
+
+
+            </div>
+
+            <div>
+                <div class="bg-white ml-10 m-4  rounded-2xl p-6">
+                    <h2 class="text-2xl font-bold mb-10">APERÇU DE LA CARTE</h2>
+                    <div>
+                        <div
+                            class="card1-defis border border-gray-200 bg-white rounded-xl pl-6 pt-8 pr-5 pb-8 flex gap-4 flex-col">
+                            <div class="card-header flex items-center justify-between">
+                                <p  id="cardSport" class="text-[#A0AAB3] font-semibold text-sm">Course à pied</p>
+                                <p1 class="bg-[#C5F03A] rounded-xl w-18 h-6 font-semibold text-sm flex justify-center">
+                                    Actif
+                                </p1>
+                            </div>
+                            <h2 id="cardTitre" class="text-2xl " font-bold>100 KM DE COURSE</h2>
+                            <div class="flex items-center justify-between text-sm font-semibold text-[#53605A] ">
+                                <p>Objectif :<p id="cardObjectif">100</p> </p>
+                                <p id="cardUnite"> km</p>
+                                <p> Limite :<p id="cardDate"> 30/11/2026</p></p>
+                            </div>
+                            <div class="progress-container flex items-center justify-between gap-6">
+                                <div class="bg-[#E6E6E6] w-2/2 h-4 rounded-lg">
+                                    <div class="bg-[#FF641F] w-0 h-4 rounded-lg"></div>
+                                </div>
+                                <p class="text-sm font-semibold text-[#A0AAB3]">0%</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white ml-10 m-4  rounded-2xl p-6">
+                        <h2 class="text-2xl font-bold mb-5">RÈGLES DE SAISIE</h2>
+                        <div class="flex flex-col text-sm text-[#53605A]">
+                            <p>• Les champs marqués * sont obligatoires.</p>
+                            <p>• L’objectif doit être supérieur à zéro.</p>
+                            <p>• La date limite ne peut pas être passée.</p>
+                            <p>• Un message confirme la création du défi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
