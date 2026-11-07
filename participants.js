@@ -1,26 +1,8 @@
-// import {participants} from './ajouterParticipant.js'
-// console.log(participants)
-let participants = [
-    {
-        username: "fatima",
-        pseudoname: "@fatima",
-        defits: ["natation", "runing"],
-    },
-    {
-        username: "sara",
-        pseudoname: "@sara",
-        defits: ["runing"],
-    },
-    {
-        username: "ahmad",
-        pseudoname: "@ahmad",
-        defits: ["velo", "runing"],
-    }
-]
+participants = JSON.parse(localStorage.getItem("participants"))
 // afichage dynamique des participants:
 let Participants_table_content = document.getElementById("Participants-table-content")
 let affichageParticipants = () => {
-    if(participants.length!=0){
+    if(participants!=null){
      participants.forEach((participant) => {
         Participants_table_content.innerHTML += `<div class="participant-card flex justify-between items-center
                  pt-4 border-t border-[#818680] pb-4">
@@ -47,7 +29,7 @@ let affichageParticipants = () => {
                             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                     </svg>
 
-                    <p class="text-xl">no resultat found</p>
+                    <p class="text-xl">no participants</p>
                 </div>`
 } 
 }

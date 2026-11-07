@@ -4,13 +4,8 @@ let addparticipantbtn = document.getElementById('addparticipantbtn')
 let participantPseudo = document.getElementById("participantPseudo")
 let pseudoSpan = document.getElementById("pseudoSpan")
 let form_participant = document.getElementById("form_participant")
-
 // participant form validation the input
-export let participants = [{
-        username: "fatima",
-        pseudoname: "@fatima",
-        defits: ["natation", "runing"],
-    }];
+let participants = [];
 function nameValidation() {
     if (participantName.value == "") {
         spanName.textContent = '*le nom est required'
@@ -40,7 +35,8 @@ form_participant.addEventListener('submit', event => {
     if (form_participant.name.value != "" && form_participant.pseudo.value != "") {
         let participant = {
             username: form_participant.name.value,
-            pseudoname: form_participant.pseudo.value
+            pseudoname: form_participant.pseudo.value,
+            defits:[]
         }
         participants.push(participant)
         localStorage.setItem("participants", JSON.stringify(participants))
