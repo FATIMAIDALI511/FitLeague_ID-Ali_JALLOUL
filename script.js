@@ -129,7 +129,6 @@ annuler.addEventListener("click", () => {
 //     })
 // }
 // afficheDefis()
-=======
 let participantName = document.querySelector("#participantName")
 let spanName = document.querySelector("#spanName")
 let addparticipantbtn = document.getElementById('addparticipantbtn')
