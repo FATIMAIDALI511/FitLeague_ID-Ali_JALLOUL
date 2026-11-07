@@ -30,7 +30,6 @@
             </div>
             <button class="button rounded-3xl bg-[#C5F03A] w-60 h-10">+Nouveau défi</button>
         </nav>
-
     </header>
     <main class="p-10">
         <div class="AjouterParticipants-card">
@@ -43,7 +42,7 @@
                 <p><span class="text-xl text-[#818680]">Participants / </span><span class=" font-bold text-[#4B9B35]">Nouveau participant</span></p>
             </div>
             <div class="flex justify-center p-6">
-                <div class="p-8 border-t w-3/5 border-[#C5F03A] border-t-[8px] bg-white rounded-lg">
+                <div class="p-8 border-t w-3/5 border-[#C5F03A] border-t-[8px] bg-white rounded-lg ">
 
 
 
@@ -67,33 +66,40 @@
                         </div>
 
                     </div>
-                    <form action="" class=" border-t border-[#818680] pt-3 ">
-                        <label for="name" class=" font-bold">Nom complet</label><br>
+                    <form class=" form border-t border-[#818680] pt-3" id="form_participant">
+                        <label class=" font-bold">Nom complet</label><br>
                         <input class="border border-[#818680] rounded-lg p-2 mt-2 mb-2 w-full" type="text" name="name"
-                            id="name" required placeholder="Ex. Sami Rahmani"><br>
-                        <label for="pseudoname" class=" font-bold">pseudo</label><br>
-                        <input class="border border-[#818680] rounded-lg p-2 mt-2 mb-2 w-full" type="text" name="name"
-                            id="name" required placeholder="@sami_run"><br>
-                        <label for="defis" class=" font-bold">Choisir les défis</label><br>
+                            id="participantName"  placeholder="Ex. Sami Rahmani">
+                            <span id="spanName"></span><br>
+                        <label class=" font-bold">pseudo</label><br>
+                        <input class="border border-[#818680] rounded-lg p-2 mt-2 mb-2 w-full" type="text" name="pseudo"
+                            id="participantPseudo"  placeholder="@sami_run">
+                            <span id="pseudoSpan"></span><br>
+                        <label class=" font-bold">Choisir les défis</label><br>
                         <p class="text-sm text-[#818680] pb-2">Sélectionnez un ou plusieurs défis pour ce
                             participant</p>
                         <div class="grid grid-cols-3 gap-8 border-b pb-5">
                             <div class="border rounded-lg p-4">
 
                                 <input type="checkbox" name="defi" class="w-4 h-4 cursor-pointer">
-                                <label for="defis"> 100 km de course</label>
+                                <label > 100 km de course</label>
                             </div>
                             <div class="border p-4 rounded-lg">
 
                                 <input type="checkbox" name="defi" class="w-4 h-4 cursor-pointer">
-                                <label for="defis"> Gainage quotidien</label>
+                                <label > Gainage quotidien</label>
                             </div>
                             <div class="border p-4 rounded-lg">
 
                                 <input type="checkbox" name="defi" class="w-4 h-4 cursor-pointer">
-                                <label for="defis"> Sortie vélo longue</label>
+                                <label > Sortie vélo longue</label>
                             </div>
+                            
 
+                        </div>
+                        <div class="flex justify-end gap-6">
+                            <input type="submit" class="button rounded-lg bg-[#C5F03A] p-2 mt-4" id="addparticipantbtn">
+                            <button type="text" class="button border border-[#000000] rounded-lg  p-2 mt-4"><a href="Participants.html">Annuler</a> </button>
                         </div>
 
                     </form>
@@ -108,6 +114,7 @@
         </div>
 
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
