@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -35,28 +35,73 @@
     <main class="p-10">
         <div class="AjouterParticipants-card">
             <div class="AjouterParticipants-titre pb-10">
+                <p class=" font-bold text-[#4B9B35]">GESTION DES PARTICIPANTS</p>
                 <h1 class="text-4xl font-bold">NOUVEAU PARTICIPANT</h1>
+                <p class="mb-8 text-[#4B9B35]">Ajoutez un nouveau membre à votre communauté FitLeague.</p>
             </div>
-            <div class="flex justify-center">
-                <div class="p-8 border-[#818680] border w-2/5 rounded-lg">
-                <form action="" class=" ">
-                    <label for="name">Nom</label><br>
-                    <input class="border border-[#818680] rounded-lg p-2 mt-2 mb-2 w-full" type="text" name="name" id="name" required
-                        placeholder="le nom conplet"><br>
-                    <label for="pseudoname">pseudo</label><br>
-                    <input class="border border-[#818680] rounded-lg p-2 mt-2 mb-2 w-full" type="text" name="name" id="name" required
-                        placeholder="le nom conplet"><br>
-                    <input type="checkbox" id="vehicle1" name="vehicle1">
-                    <label for="vehicle1"> 100 km de course</label><br>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                    <label for="vehicle2"> Gainage quotidien</label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                    <label for="vehicle3">Sortie vélo longue</label>
-                </form>
+            <div>
+                <p><span class="text-xl text-[#818680]">Participants / </span><span class=" font-bold text-[#4B9B35]">Nouveau participant</span></p>
             </div>
+            <div class="flex justify-center p-6">
+                <div class="p-8 border-t w-3/5 border-[#C5F03A] border-t-[8px] bg-white rounded-lg">
+
+
+
+
+                    <div class="flex gap-5 pb-4">
+
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                                stroke="currentColor" class="w-14 h-14 rounded-lg bg-[#C5F03A]">
+                                <path strokeLinecap="round" strokeLinejoin="round"
+                                    d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                            </svg>
+
+                        </div>
+                        <div>
+                            <p>
+
+                                Informations du participant
+                            </p>
+                            <p>Renseignez les informations pour créer son profil.</p>
+                        </div>
+
+                    </div>
+                    <form action="" class=" border-t border-[#818680] pt-3 ">
+                        <label for="name" class=" font-bold">Nom complet</label><br>
+                        <input class="border border-[#818680] rounded-lg p-2 mt-2 mb-2 w-full" type="text" name="name"
+                            id="name" required placeholder="Ex. Sami Rahmani"><br>
+                        <label for="pseudoname" class=" font-bold">pseudo</label><br>
+                        <input class="border border-[#818680] rounded-lg p-2 mt-2 mb-2 w-full" type="text" name="name"
+                            id="name" required placeholder="@sami_run"><br>
+                        <label for="defis" class=" font-bold">Choisir les défis</label><br>
+                        <p class="text-sm text-[#818680] pb-2">Sélectionnez un ou plusieurs défis pour ce
+                            participant</p>
+                        <div class="grid grid-cols-3 gap-8 border-b pb-5">
+                            <div class="border rounded-lg p-4">
+
+                                <input type="checkbox" name="defi" class="w-4 h-4 cursor-pointer">
+                                <label for="defis"> 100 km de course</label>
+                            </div>
+                            <div class="border p-4 rounded-lg">
+
+                                <input type="checkbox" name="defi" class="w-4 h-4 cursor-pointer">
+                                <label for="defis"> Gainage quotidien</label>
+                            </div>
+                            <div class="border p-4 rounded-lg">
+
+                                <input type="checkbox" name="defi" class="w-4 h-4 cursor-pointer">
+                                <label for="defis"> Sortie vélo longue</label>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
 
             </div>
-            
+
 
 
 
