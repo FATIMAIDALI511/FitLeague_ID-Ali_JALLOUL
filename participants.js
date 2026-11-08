@@ -1,13 +1,23 @@
 participants = JSON.parse(localStorage.getItem("participants"))
 // afichage dynamique des participants:
 let Participants_table_content = document.getElementById("Participants-table-content")
+
+let afficherDefitsParticipant=(defisparticipant)=>{
+    let defit;
+    let defits=[]
+    defisparticipant.forEach(ele=>{
+    defit= defis.find(defit=>defit.id==ele)
+    defits.push(defit.titre)
+    })
+    return `${defits}`
+}
 let affichageParticipants = () => {
     if(participants!=null){
      participants.forEach((participant) => {
         Participants_table_content.innerHTML += `<div class="participant-card flex justify-between items-center
                  pt-4 border-t border-[#818680] pb-4">
                  ${affichagename(participant.username, participant.pseudoname)}
-      <div class="defis text-[#53605A]">${participant.defits}</div>
+      <div class="defis text-[#53605A]">${afficherDefitsParticipant(participant.defits)}</div>
                     <div class="participant-card-modification-suppression flex gap-10">
                         <div class="card-actions flex items-center gap-4">
                             <div 

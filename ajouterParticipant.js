@@ -4,8 +4,22 @@ let addparticipantbtn = document.getElementById('addparticipantbtn')
 let participantPseudo = document.getElementById("participantPseudo")
 let pseudoSpan = document.getElementById("pseudoSpan")
 let form_participant = document.getElementById("form_participant")
+let choisit_defit = document.getElementById("choisit-defit")
+
+
+//afichage des defis disponibles:
+affichage = () => {
+    defis.forEach(defit => {
+        choisit_defit.innerHTML += `<div class="choist-defit-card border rounded-lg p-4 hover:border-2 hover:border-[#C5F03A]">
+                                <input type="checkbox" name="defi" class="checkbox-defi w-4 h-4 cursor-pointer" id="${defit.id}">
+                                <label >${defit.titre}</label>
+                            </div>`
+
+    });
+}
+affichage()
 // participant form validation the input
-let participants = [];
+let participants = JSON.parse(localStorage.getItem("participants"))
 function nameValidation() {
     if (participantName.value == "") {
         spanName.textContent = '*le nom est required'
@@ -25,8 +39,6 @@ function pseudoValidation() {
         participantPseudo.classList = 'border border-[#F52727] rounded-lg p-2 mt-2 mb-2 w-full'
         pseudoSpan.textContent = '*entrer un pseudoname commencer avec @'
     }
-
-
 }
 form_participant.addEventListener('submit', event => {
     event.preventDefault()
@@ -36,14 +48,19 @@ form_participant.addEventListener('submit', event => {
         let participant = {
             username: form_participant.name.value,
             pseudoname: form_participant.pseudo.value,
-            defits:[]
+            defits: []
         }
+        document.querySelectorAll(".checkbox-defi").forEach(ele=>{
+        if(ele.checked){
+            participant.defits[participant.defits.length]=ele.id 
+        }
+    })
         participants.push(participant)
         localStorage.setItem("participants", JSON.stringify(participants))
+        window.location.href = "Participants.html";
     }
-    
-
 })
+
 participantName.addEventListener("input", () => {
     participantName.classList = ' border-[#818680] border rounded-lg p-2 mt-2 mb-2 w-full';
     spanName.textContent = "";
